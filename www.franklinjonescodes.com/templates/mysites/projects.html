@@ -1,0 +1,63 @@
+{% extends 'mysites/base.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'mysites/css/projects.css'%}">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?faly=miRaleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.min.css'%}">
+    <title>projects</title>
+</head>
+
+<body>
+    <h1 class="header">Projects</h1>
+    
+    <h2 class="sub-header">Web apps</h2>
+    <a href="https://chickendaiquirui.herokuapp.com"><img class="matts-site" src="{% static 'mysites/img/matt.jpeg'%}" alt="Picture of chickendaiquirui website"></a>
+    <h1><a href="https://chickendaiquirui.herokuapp.com">www.chickendaiquirui.com</a></h1>
+    <p class="matts-paragraph">I built www.chickendaiquirui.com using the python framework django and deployed it using the Heroku CLI. The site feautures a functioning contact form, embedded youtube links, and an easy to navigate UI, and is completely responsive. Technologies used were Python, HTML, CSS, JavaScript, and Heroku.</p>
+    
+    <a href="https://quinnbeebeauty.com"><img class="quinns-site" src="{% static 'mysites/img/quinn.jpeg'%}" alt="Picture of chickendaiquirui website"></a>
+    <h1><a href="https://quinnbeebeauty.com">www.quinnbeebeauty.com</a></h1>
+    <p class="quinns-paragraph">I built www.quinnbeebeauty.com using the python framework django and deployed it using the Heroku CLI. The site feautures a functioning contact form, an embedded google map, embedded and email and phone dialing and an easy to navigate UI, and is completely responsive. Technologies used were Python, HTML, CSS, JavaScript, and Heroku.</p>
+
+    <h2 class="header-games">Games</h1>
+    
+    <a href="https://github.com/FranklinJamesJones89/Star-Wars" target="blank"><img class="starwars"
+    src="{% static 'mysites/img/starwars.png'%}" alt="star wars game image"></a>
+
+    <h1 class="project-title3">Star Wars</h1>
+
+    <p class="project-paragraph3">Space Invaders-style Star Wars Game built with the Python library Pygame.</p>
+
+    <h2 class="footer-title">Follow me</h2>
+    <div class="github-icon">
+        <a href="https://github.com/FranklinJamesJones89/" target="blank"><i class="fab fa-github" style="color:white;"></i></a>
+        <a href="https://twitter.com/Fjones89James" target="blank"><i class="fab fa-twitter" style="color: white;"></i></a>
+        <a href="https://www.linkedin.com/in/franklin-jones-156539220/" target="blank"><i class="fab fa-linkedin" style="color: white;"></i></a>
+    </div>
+    
+    <footer>
+        <a href="{% url 'mysites:index' %}">home</a>
+        <a href="{% url 'mysites:projects' %}">projects</a>
+        <a href="https://github.com/FranklinJamesJones89">github</a>
+        <a href="{% url 'mysites:contact' %}">contact</a>
+        <a href="{% url 'mysites:about' %}">about</a>
+    </footer>
+
+</body>
+<script src="{% static 'mysites/app.js' %}"></script>
+
+</html>
+
+{% endblock content %}

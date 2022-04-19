@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+nav {
+margin-top: 0%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+min-height: 2vh;
+font-family: 'Raleway', sans-serif;
+background-color: orange;
+    
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+
+}
+
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 2vw;
+    color: black;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 5px;
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+        background-color: orange;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.header {
+    margin: 10%;
+    color: orange;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 5vw;
+}
+
+.sub-header {
+    color: teal;
+    font-size: 4vw;
+    padding: 2%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.matts-site {
+    margin-top: 15%;
+    width: 100%;
+}
+
+h1, a{
+    margin-top: 5%;
+    color:teal;
+    text-align: center;
+    font-size: 5vw;
+    text-decoration: none;
+}
+
+.matts-paragraph {
+    color: grey;
+    text-align: center;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 4vw;
+}
+
+.quinns-site {
+    margin-top: 50%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right:15%;
+}
+
+.quinns-paragraph {
+    color: grey;
+    text-align: center;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 4vw;
+}
+
+.header-games {
+    margin-top: 35%;
+    padding: 2%;
+    color: teal;
+    font-size: 5vw;
+    font-family: 'Raleway', sans-serif;
+}
+
+.starwars {
+    margin-top: 15%;
+    margin-left: 8%;
+    width: 100%;
+}
+
+
+.project-title3 {
+    margin-top: 2%;
+    text-align: center;
+    font-size: 5vw;
+    text-decoration: none;
+    color: teal;
+    font-family: 'Raleway', sans-serif;
+}
+
+.project-paragraph3 {
+    margin-top: 2%;
+    color: grey;
+    text-align: center;
+    font-size: 4vw;
+    margin-left: 25%;
+    justify-content: center;
+    margin-right: 25%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.social-header {
+    margin-top: 35%;
+    font-size: 5vw;
+    color: teal;
+    text-align: center;
+}
+
+.socials {
+    margin-top: 5%;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.footer-title {
+    margin-top: 25%;
+    text-align: center;
+    color: teal;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4vw;
+
+}
+
+.github-icon {
+    margin-top: 8%;
+    text-align: center;
+    font-size: 2vw;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+footer a {
+    color: orange;
+    font-size: 3vw;
+    text-align: center;
+    padding: 3vw;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}

@@ -1,0 +1,34 @@
+{% load static %}
+
+<nav>
+    <ul class="nav-links">
+        <li>
+            <a href="{% url 'mysites:index' %}">home</a>
+        </li>
+        
+        <li>
+            <a href="{% url 'mysites:projects' %}">projects</a>
+        </li>
+
+        <li>
+            <a href="https://github.com/FranklinJamesJones89" target="blank">github</a>
+        </li>
+
+        <li>
+            <a href="{% url 'mysites:contact' %}">contact</a>
+        </li>
+
+        <li>
+            <a href="{% url 'mysites:about' %}">about</a>
+        </li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+
+<script src="{% static 'mysites/js/app.js'%}"></script>
+
+{% block content %}{% endblock content %}

@@ -1,0 +1,48 @@
+{% extends 'mysites/base.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'mysites/css/about.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.min.css'%}">
+    <title>about</title>
+</head>
+
+<body>
+    <div class="about-container">
+        <img src="{% static 'mysites/img/about.jpg'%}" alt="Picture of Franklin Jones">
+        <h1>About Me</h1>
+        <p>I am a full stack web developer of three years. I love programming and learning new technologies.I am comfortable with Python, JavaScript, HTML, and CSS. Along with frameworks such as Django, React and content management systems such as Wordpress.</p>
+    </div>
+    <img src="{% static 'mysites/img/socks.jpeg'%}" alt="">
+    <p>Coding is my life, but when I'm not programming, I'm playing guitar, skateboarding, reading, or hanging out with friends and family.</p>
+   
+    <h1 class="social-header">Follow Me</h1> 
+
+    <div class="socials">
+        <a href="https://github.com/FranklinJamesJones89" target="blank"><i class="fab fa-github" style="color:white;"></i></a>
+        <a href="https://twitter.com/home" target="blank"><i class="fab fa-twitter" style="color:white;"></i></a>
+        <a href="https://www.linkedin.com/in/franklin-jones-156539220/" target="blank"><i class="fab fa-linkedin" style="color:white;"></i></a>
+    </div>
+
+    <footer>
+        <a href="{% url 'mysites:index' %}">home</a>
+        <a href="{% url 'mysites:projects' %}">projects</a>
+        <a href="https://github.com/FranklinJamesJones89">github</a>
+        <a href="{% url 'mysites:contact' %}">contact</a>
+        <a href="{% url 'mysites:about' %}">about</a>
+    </footer>
+    
+    <script src="{% static 'mysites/js/app.js'%}"></script>
+
+</body>
+
+</html>
+
+{% endblock content %}

@@ -1,0 +1,156 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'mysites/css/styles.css'%}">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?faly=miRaleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.min.css'%}">
+    <title>Franklin Jones</title>
+</head>
+
+<body>
+    <h1>Hello<h1>
+    
+    <div class="container">
+        <img class="container-img" src="{% static 'mysites/img/header-img.jpeg'%}"
+            alt="Picture of desk and computers">
+        
+        <div><img class="home-img" src="{% static 'mysites/img/franklin.jpeg'%}" alt="Picture of Franklin Jones"></div>
+       
+        <div class="sub-header">MY NAME IS</div>
+       
+        <div class="header">FRANKLIN JONES
+            <hr>
+        </div>
+        
+        <div class="sub-header2">SOFTWARE DEVELOPER PROGRAMMER CODER</div>
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li>
+                <a href="{% url 'mysites:index' %}">home</a>
+            </li>
+
+            <li>
+                <a href="{% url 'mysites:projects' %}">projects</a>
+            </li>
+
+            <li>
+                <a href="https://github.com/FranklinJamesJones89" target="blank">github</a>
+            </li>
+
+            <li>
+                <a href="{% url 'mysites:contact' %}">contact</a>
+            </li>
+
+            <li>
+                <a href="{% url 'mysites:about' %}">about</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    
+    <table class="code-icons">
+        <tr>
+            <td class="python-icon"><i class="fab fa-python" style="color: orange"></i></td>
+            <td class="js-icon"><i class="fab fa-js" style="color:orange"></i></td>
+            <td class="html-icon"><i class="fab fa-html5" style="color: orange"></i></td>
+        </tr>
+    </table>
+
+    <table class="code-icons2">
+        <tr>
+            <td class="css-icon"><i class="fab fa-css3" style="color: orange"></i></td>
+            <td class="django-icon">D<sub>j</sub></td>
+        </tr>
+    </table>
+
+    <div class="react-icon"><i class="fab fa-react" style="color: orange"></i></div>
+    
+    <div class="body-header">
+        <p>Skills</p>
+        <p class="about-me">About me</p>
+    </div>
+
+    <div class="body-sub-header">
+        <p class="polyglot-text">Comfortable with Python, Javascript, Html5, and CSS3, along with frameworks
+            such as Django, React, and Wordpress. Rest APIs, UI design.</p>
+        <p class="aboutme-text">Based out of Massachusetts, I am a full stack software engineer</p>
+    </div>
+
+    <div class="body-paragraph">
+        <p class="polyglot-paragraph">Dedicated to creating sleek, stylish and efficient user interfaces on the
+            client side using Javascript, HTML5, and CSS3 and creating efficient server-side code using Python.
+        </p>
+    </div>
+
+
+
+    <h1 class="projects-header"><a href="{% url 'mysites:projects' %}" class="projects-header">Projects</a></h1>
+
+    <a href="http://chickendaiquirui.herokuapp.com/"><img class="matt-site"
+            src="{% static 'mysites/img/matt.jpeg'%}" alt="picture of chicken daiquirui website"></a>
+
+    <h1 class="project-title1">www.chickendaiquirui.herokuapp.com<a
+            href="https://chickendaiquirui.herokuapp.com/" target="blank"></a></h1>
+
+    <p class="project-paragraph1">Web application built with the django framework, Python, Javascript, HTML, and
+        CSS. Deployed with Heroku</p>
+
+    <div class="github-icon">
+        <a href="https://github.com/FranklinJamesJones89" target="blank"><i class="fab fa-github"
+        style="color: white"></i></a>
+    </div>
+
+
+    <a href="http://quinnbeebeauty.com/" target="blank"><img class="quinn-site"
+    src="{% static 'mysites/img/quinn.jpeg'%}" alt="picture of chicken daiquirui website"></a>
+
+    <h1 class="project-title2">www.quinnbeebeauty.com</h1>
+
+    <p class="project-paragraph2">Web application built with the django framework, Python, Javascript, HTML, and, deployed with the Heroku CLI.</p> <div class="github-icon"> <a href="https://github.com/FranklinJamesJones89" target="blank"><i class="fab fa-github" style="color: white"></i></a> </div> CSS. Deployed with Heroku</p>
+    <a href="https://github.com/FranklinJamesJones89/Star-Wars" target="blank"><img class="starwars"
+            src="{% static 'mysites/img/starwars.png'%}" alt="star wars game image"></a>
+
+    <h1 class="project-title3">Star Wars Game</h1>
+
+    <p class="project-paragraph3">Space Invaders-style Star Wars Game built with the Python library Pygame</p>
+
+    <div class="github-icon">
+        <a href="https://github.com/FranklinJamesJones89" target="blank"><i class="fab fa-github" style="color:white;"></i></a>
+    </div>
+
+    <h2 class="social-header">Follow me</h2>
+    
+    <div class="socials">
+        <a href="https://github.com/FranklinJamesJones89/" target="blank"><i class="fab fa-github" style="color:white;"></i></a>
+        <a href="https://twitter.com/Fjones89James" target="blank"><i class="fab fa-twitter" style="color: white;"></i></a>
+        <a href="https://www.linkedin.com/in/franklin-jones-156539220/" target="blank"><i class="fab fa-linkedin" style="color: white;"></i></a>
+    </div>
+    
+    <footer>
+        <a href="{% url 'mysites:index' %}">home</a>
+        <a href="{% url 'mysites:projects' %}">projects</a>
+        <a href="https://github.com/FranklinJamesJones89">github</a>
+        <a href="{% url 'mysites:contact' %}">contact</a>
+        <a href="{% url 'mysites:about' %}">about</a>
+    </footer>
+</body>
+
+<script src="{% static 'mysites/js/app.js'%}"></script>
+
+</html>
