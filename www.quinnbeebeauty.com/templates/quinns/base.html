@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.min.css'%}" rel="stylesheet"
+        type="text/css">
+</head>
+
+<body>
+    <style>
+        .crown {
+            color: black;
+            background-color: white;
+            text-align: center;
+        }
+    </style>
+    
+    <h1 class="logo"><a href="{% url 'quinns:index'%}">QuinnBeeBeauty</a></h1>
+    <h5 class="sub-logo">Beauty Cosmetic Personal Care</h5>
+    <div class="crown">
+        <i class="fa solid fa-crown"></i>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li>
+                <a href="https://quinn-bee-beauty.square.site/" target="blank">book</a>
+            </li>
+            <li>
+                <a href="{% url 'quinns:services'%}" target="blank">services</a>
+            </li>
+            <li>
+                <a href="{% url 'quinns:contact'%}" target="blank">contact</a>
+            </li>
+
+            <li>
+                <a href="{% url 'quinns:about'%}" target="blank">about</a>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+</body>
+
+</html>
+
+<script src="{% static 'quinns/js/apps.js'%}"></script>
+
+{% block content %}{% endblock content %}

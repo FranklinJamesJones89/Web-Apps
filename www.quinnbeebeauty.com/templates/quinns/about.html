@@ -1,0 +1,65 @@
+{% extends 'quinns/base.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'quinns/css/about.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/cdisplay=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.min.css'%}" rel="stylesheet"
+    type="text/css">
+    <title>about</title>
+</head>
+
+<body>
+    <h1 class="header">ABOUT ME</h1>
+    <img class="header-img" src="{% static 'quinns/img/aboutme.jpeg'%}" alt="">
+    <h3 class="header-text">A makeup artist for over 5 years. I speacialize in events and weddings. </h3>
+    <p class="header-paragraph">I love making people look their best and feel sensational!</p>
+
+    <div class="footer">
+        <h1>Follow Quinn on Social Media</h1>
+    </div>
+
+    <div class="social">
+        <a href="https://www.instagram.com/quinnbeebeauty/?utm_medium=copy_link" target="blank"><i class="fab fa-instagram fa-2x"></i></a>
+    </div>
+
+    <ul class="footer-links">
+        <li>
+            <a href="{% url 'quinns:index'%}">home</a>
+        </li>
+        <li>
+            <a href="https://quinn-bee-beauty.square.site/" target="blank">book</a>
+        </li>
+    </ul>
+
+    <ul class="footer-links2">
+        <li>
+            <a href="{% url 'quinns:services'%}">services</a>
+        </li>
+        <li>
+            <a href="{% url 'quinns:contact'%}">contact</a>
+        </li>
+        <li>
+            <a href="{% url 'quinns:about'%}">about</a>
+        </li>
+    </ul>
+</body>
+
+</html>
+
+{% endblock content %}

@@ -1,0 +1,82 @@
+{% extends 'quinns/base.html' %}
+{% block content %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'quinns/css/services.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/cdisplay=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.min.css'%}" rel="stylesheet"
+        type="text/css">
+    <title>services</title>
+</head>
+
+<body>
+    <h1 class="title">services</h1>
+    <section class="parent">
+        <section class="child">Lashes</section>
+        <section class="child">Extensions classic $120<br><br>Extensions Hybrid $130<br><br>Extensions Mega Volume $140<br><br>Fill $80<br><br>Lift $120<br><br>Tint $80<br><br>Treatment $30<br><br>Bath $30<hr></section>
+    </section>
+   
+    <section class="parent">
+        <section class="child">Brows</section>
+        <section class="child">Tint $80<br><br>Lamination $80<br><br><hr></section>
+    </section>
+    
+    <section class="parent">
+        <section class="child">Bridal</section>
+        <section class="child">w/Airbrush Price Varies<br><br>w/o Airbrush $65<br><br><hr></section>
+    </section>
+    
+    <section class="parent">
+        <section class="child">Other</section>
+        <section class="child">Event or Bridal Trial Run $65<br><br>1 Hr Makeup Session $75<br><br>2 Hr Makeup Session $125<br><br>Facial Waxing $40<br><br>30 Min Facial $80<br><br>60 Min Facial $100<hr></section>
+    </section>
+
+    <div class="footer">
+        <h1>Follow Me on Social Media</h1>
+    </div>
+
+    <div class="social">
+        <a href="https://www.instagram.com/quinnbeebeauty/?utm_medium=copy_link" target="blank"><i class="fab fa-instagram fa-2x"></i></a>
+    </div>
+    
+    <ul class="footer-links">
+        <li>
+            <a href="{% url 'quinns:index'%}">home</a>
+        </li>
+        <li>
+            <a href="https://quinn-bee-beauty.square.site/" target="blank">book</a>
+        </li>
+    </ul>
+
+    <ul class="footer-links2">
+        <li>
+            <a href="{% url 'quinns:services'%}">services</a>
+        </li>
+        <li>
+            <a href="{% url 'quinns:contact'%}">contact</a>
+        </li>
+        <li>
+            <a href="{% url 'quinns:about'%}">about</a>
+        </li>
+    </ul>
+</body>
+
+</html>
+
+{% endblock content %}

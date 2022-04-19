@@ -1,0 +1,113 @@
+{% extends 'quinns/base.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'quinns/css/contact.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.min.css'%}" rel="stylesheet"
+        type="text/css">
+    <title>contact</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="{% static 'quinns/img/salon-img4.jpg'%}" alt="">
+        <div class="layer"></div>
+        <div class="header">
+            <h1>Contact Me</h1>
+        </div>
+        <div class="header">
+            <h2>Have any questions? Feel free to visit!</h2>
+        </div>
+        <div class="email"><i class="fa fa-envelope" style="color:white;"></i><a href="mailto:">quinnbeebeautyfl@gmail.com</a></div>
+        <div class="phone"><i class="fa fa-phone" style="color: white"></i><a href="tel:4076178582">407-617-8582</a></div>
+    </div>
+
+
+    <h1 class="contact-header"><a href="{% url 'quinns:contact' %}" class="contact-title"></a></h1>
+    <div class="contact-container">
+        <form action="" method="POST" class="contact-form">
+            <div class="form-control">
+                {% csrf_token %}
+                <div class="tag">Full Name</div>
+                <input type="text" name="full-name">
+            </div>
+
+            <div class="form-control">
+                {% csrf_token %}
+                <div class="tag">Email</div>
+                <input type="text" name="email">
+            </div>
+
+            <div class="form-control">
+                {% csrf_token %}
+                <div class="tag">Subject</div>
+                <input type="text" name="subject">
+            </div>
+
+            <div class="form-control">
+                {% csrf_token %}
+                <div class="tag">Message</div>
+                <input type="text" name="message" class="message-box">
+            </div>
+
+            <div class="form-control">
+                {% csrf_token %}
+                <div class="tag"></div>
+                <input type="submit" class="btn submit-btn" value="Send Message">
+            </div>
+        </form>
+    </div>
+
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25895663.485556163!2d-95.665!3d37.599999999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1648755789458!5m2!1sen!2sus"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="footer">
+        <h1>Follow Me on Social Media</h1>
+    </div>
+    
+    <div class="social-footer">
+        <a href="https://www.instagram.com/quinnbeebeauty/?utm_medium=copy_link" target="blank"><i class="fab fa-instagram fa-2x"></i></a>
+    </div>
+    
+    <ul class="footer-links">
+        <li>
+            <a href="{% url 'quinns:index'%}">home</a>
+        </li>
+        <li>
+            <a href="https://quinn-bee-beauty.square.site/" target="blank">book</a>
+        </li>
+    </ul>
+
+    <ul class="footer-links2">
+        <li>
+            <a href="{% url 'quinns:services'%}">services</a>
+        </li>
+        <li>
+            <a href="{% url 'quinns:contact'%}">contact</a>
+        </li>
+        <li>
+            <a href="{% url 'quinns:about'%}">about</a>
+        </li>
+    </ul>
+
+</body>
+
+</html>
+
+{% endblock content %}
