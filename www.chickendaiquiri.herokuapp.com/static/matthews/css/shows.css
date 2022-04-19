@@ -1,0 +1,208 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+    
+body {
+    background-color: rgb(1, 1, 1);
+}
+    
+nav {
+    /* Align items side by side. */
+    display: flex;
+    /* Create space/separation between aligned items. */
+    justify-content: space-around;
+    /* Centers items within their borders */
+    align-items: center;
+    /* Assign height of nav bar .*/
+    min-height: 5vh;
+    background-color: rgb(0, 0, 0);
+    /* Set font family.*/
+    font-family: 'Poppins', sans-serif;
+}
+    
+.logo {
+    /* Create space between icons. */
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+    
+.nav-links {
+    /* Display href links side by side. */
+    display: flex;
+    /* Combining justify content with display flex allows you to create adjust the length of the hrefs. */
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links li {
+    /* Remove unordered list bullets */
+    list-style: none;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+.nav-links a {
+    /* Assign color to href text */
+    color: white;
+    /* Remove default link styles */
+    text-decoration: none;
+    /* Create space between letters in href text */
+    letter-spacing: 3px;
+    /* Adjust boldness to href text */
+    font-weight: bold;
+    /* Set font size to href text */
+    font-size: 14px;
+}
+
+.burger {
+    /* Hide the burger while viewport is desktop */
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    /* Define the burger lines width, height, color, and margin */
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+
+/* For burger mobile slide? */
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+/* For mobile burger slide? */
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+
+#footer-text {
+    text-transform: lowercase;
+    word-spacing: 5px;
+    font-size: 15px;
+    margin: 100px;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.shows-image {
+    margin: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+
+.heading-box {
+    margin: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+
+#header1 {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#header2 {
+    margin: 20px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    color: red;
+    font-family: 'Asset', cursive;
+}
+
+
+
+#header4 {
+    margin: 20px;
+    text-align: center;
+    color: yellow;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+
+#header5 {
+    font-family: 'Asset', cursive;
+    font-size: 20px;
+    text-align: center;
+    color: yellow;
+}
+
+#header3 {
+
+    text-align: center;
+    color: red;
+    font-family: 'Asset', cursive;
+    font-size: 30px;
+}

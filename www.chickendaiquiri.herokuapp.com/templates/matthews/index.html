@@ -1,0 +1,55 @@
+{% extends 'matthews/base.html'%} 
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'matthews/css/styles.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asset&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>chicken | daqiquiri</title>
+</head>
+
+<body>
+    <!-- The navbar contains the logo and an unordered list of ahref links.-->
+    
+    <!--Main images and header text-->
+    <h1 class="heading">Chicken Daquiri</h1>
+    <h3 class="heading2">New York, New York</h3>
+    <img class="matthew_img" src="{% static 'matthews/img/matthew.png'%}" alt="Photo of Matthew Ellis on stage" />
+
+    <a href="https://soundcloud.com/user-355133042/virtue-signaling"><img
+            src="{% static 'matthews/img/podcast-image.jpeg'%}" alt="" class="podcast-image" target="blank"></a>
+
+    <!-- Video frames-->
+    <iframe class="iframe1" width="560" height="315" src="https://www.youtube.com/embed/OevieKWgF-c"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+    <iframe class="iframe2" width="560" height="315" src="https://www.youtube.com/embed/NDrpiZiC6fI"title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+    <h3 id="footer-text">2021 Chicken Daiquirui | Terms | Privacy | Cookies | franklin james</h3>
+
+    <!--JavaScript-->
+    <script src="{% static 'matthews/js/apps.js'%}">
+    </script>
+</body>
+
+</html>
+
+{% endblock content %}

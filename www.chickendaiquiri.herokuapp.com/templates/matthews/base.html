@@ -1,0 +1,39 @@
+{% load static %}
+
+<nav>
+    <div class="logo">
+        <a href="https://www.youtube.com/channel/UCCp-_AvpVKTYBpxrqsn0lew" id="youtube" target="blank"><img
+                src="{% static 'matthews/img/youtube_logo2.jpeg'%}" target="blank"></a>
+        <a href="https://www.instagram.com/chickendaiquiri/?hl=en" target="blank"><img
+                src="{% static 'matthews/img/instagram_logo2.jpeg'%}"></a>
+        <a href="https://twitter.com/chickendaiquiri" target="blank"><img
+                src="{% static 'matthews/img/twitter_logo2.jpeg'%}" id="twitter"></a>
+    </div>
+    <!--An unordered list containing nav-links(ahref)-->
+    <ul class="nav-links">
+        <li>
+            <a href="{% url 'matthews:index'%}">home</a>
+        </li>
+        <li>
+            <a href="{% url 'matthews:podcast' %}" target="blank">podcast</a>
+        </li>
+        <li>
+            <a href="{% url 'matthews:shows' %}" target="blank">shows</a>
+        </li>
+        <li>
+            <a href="{% url 'matthews:contact' %}" target="blank">contact</a>
+        </li>
+        <li>
+            <a href="{% url 'matthews:bio' %}" target="blank">bio</a>
+        </li>
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+<script 
+    src="{% static 'matthews/js/apps.js'%}">
+</script>
+{% block content %}{% endblock content %}
